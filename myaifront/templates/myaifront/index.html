@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+{%  load static %}
+<html lang="en" dir="ltr">
+<head>
+     {% load staticfiles %}
+    <link REL="SHORTCUT ICON" HREF="{% static "image/logo0.png" %}"/>
+    <meta charset="utf-8">
+    <title>ai前端</title>
+    <link rel="stylesheet" href="{% static "css/semantic.min.css" %}"/>
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    <!-- notifications css -->
+    <link rel="stylesheet" href="{% static "eva/assets/plugins/notifications/css/lobibox.min.css"%}"/>
+    <link rel="stylesheet" href="{% static "eva/assets/css/bootstrap.min.css"%}"/>
+
+
+</head>
+<body class="ai">
+{#{% verbatim %}#}
+<div id="index">
+<div class="top-menu">
+    <div class="ui container">
+        <div class="ui four column grid">
+        <!--<div v-for="item in topmenu" class="column">
+            {{ item.title }}
+        </div>-->
+            <div @click="" class="column">
+                    首页
+             </div>
+            <div @click="toeva()" class="column">
+                    人工智能
+
+             </div>
+
+            <div @click="userlogin()" class="column">
+                   登录
+            </div>
+            <!--<div class="column">
+                  <a href="/eva/userLogin">登录</a>
+            </div>-->
+            <div @click="userregistration()" class="column">
+                   注册
+            </div>
+        </div>
+    </div>
+    <!--<button class="btn btn-dark" onclick="anim1_noti()">SHOW ME</button>
+    <button type="button" class="btn btn-info waves-effect waves-light btn-sm" id="confirm-btn-alert">Click me</button>-->
+</div>
+{#<div class="father">#}
+{#    <div class="son"  >#}
+{##}
+{#       <div >#}
+{#         <img src="/upload/0.png" id="img0" class="lz" alt="" />#}
+{#         <img src="/upload/0.png" id="img1" class="lz" alt="" />#}
+{#         <img src="/upload/bei1.png" class="lz" alt="" />#}
+{#         <img src="/upload/0.png" id="img2" class="lz" alt=""/>#}
+{#         <img src="/upload/0.png" id="img3" class="lz" alt="" />#}
+{#         <img src="/upload/bei1.png" class="lz" alt="" />#}
+{#         <img src="/upload/0.png" id="img4" class="lz" alt=""/>#}
+{#         <img src="/upload/0.png" id="img5" class="lz" alt="" />#}
+{#       </div>#}
+{##}
+{##}
+{#    </div>#}
+{#</div>#}
+    <div style="margin-left:45%;margin-top:15%;letter-spacing:4px;color: white">
+
+              <p style="font-size: 64px;font-family: 幼圆;margin-left: -90px ">Amadeus系统</p>
+
+              <div style="display: flex">
+            <h2>已创建</h2><h1 style="margin-left: 6px">{{ count }}</h1><h2 style="margin-left: 6px">个用户</h2>
+              </div>
+
+                <div style="margin-top: 20px;margin-left: -10px">
+                       <button type="button" class="btn btn-light waves-effect waves-light m-1" style="background-color:transparent">
+                           <img @click="toeva()" style="width: 180px;height: 40px" src="{% static "image/btnlogo.png"%}">
+                       </button>
+                </div>
+
+    </div>
+
+ <!--   <div v-show="userUI" id="login">
+        <div class="userUi">
+        <div class="ui container">
+            <h3>登录</h3>
+            <div class="input">
+            <div class="item">
+                <input type="text" v-model="username" name="" value="" placeholder="用户名">
+            </div>
+            <div class="item">
+                <input type="password" v-model="password"  name="" value="" placeholder="密码">
+            </div>
+        </div>
+            <button  @click="userLogin()" type="button" name="button" style="background: #66da81;color: #fff;">确定</button>
+            <button type="button" name="button">取消</button>
+        </div>
+            </div>
+    </div>-->
+</div>
+
+{#{% endverbatim %}#}
+    <script src="{% static "eva/assets/js/jquery.min.js" %}"></script>
+    <script src="{% static "eva/assets/plugins/alerts-boxes/js/sweet-alert-script.js"%}"></script>
+    <script src="{% static "eva/assets/plugins/alerts-boxes/js/sweetalert.min.js"%}"></script>
+    <script src="{% static "js/vue.js" %}" charset="utf-8"></script>
+    <script src="{% static "js/reqwest.js" %}" charset="utf-8"></script>
+    <script src="{% static 'js/js.cookie.js' %}" charset="utf-8"></script>
+    <script src="{% static "js/index.js" %}" charset="utf-8"></script>
+    <script type="text/javascript">
+         var csrftoken = Cookies.get('csrftoken')
+         console.log(csrftoken)
+     </script>
+  <script src="{% static "eva/assets/js/popper.min.js" %}"></script>
+  <script src="{% static "eva/assets/js/bootstrap.min.js" %}"></script>
+{#  <script src="{% static "eva/assets/plugins/notifications/js/notification-custom-script.js" %}"></script>#}
+{#  <script src="{% static "eva/assets/plugins/notifications/js/lobibox.min.js" %}"></script>#}
+{#  <script src="{% static "eva/assets/plugins/notifications/js/notifications.min.js" %}"></script>#}
+{#<script>#}
+{#    function toNum(num)   //以为当是个位数时，要显示01的状态#}
+{#    {#}
+{#       if (num<10)#}
+{#        {return '0'+num;}#}
+{#       else#}
+{#        {return ""+num;}#}
+{##}
+{#    }#}
+{#    window.onload=function()#}
+{#    {#}
+{##}
+{#        var obj=document.getElementsByTagName("img");#}
+{##}
+{#        function tick()#}
+{#        {#}
+{#             var time= new Date();#}
+{#             var time1=toNum(time.getHours())+toNum(time.getMinutes())+toNum(time.getSeconds()); //获取小时分钟秒的一个字符串#}
+{#             // console.log(time1);#}
+{#            for (var i=0;i<8;i++)     //一个有六张图片，前两张代表小时，中间两张代表分钟，后两张代表秒，#}
+{#                {#}
+{#                    if(i==0||i==1)#}
+{#                    {#}
+{#                         obj[i].src='/upload/'+time1[i]+'.png';   //时间字符串是什么，就显示什么图片#}
+{#                    }#}
+{#                    obj[i].src='/upload/'+time1[i]+'.png';   //时间字符串是什么，就显示什么图片#}
+{#                    if(i==3||i==4)#}
+{#                    {#}
+{#                         obj[i].src='/upload/'+time1[i-1]+'.png';   //时间字符串是什么，就显示什么图片#}
+{#                    }#}
+{#                    if(i==6||i==7)#}
+{#                    {#}
+{#                         obj[i].src='/upload/'+time1[i-2]+'.png';   //时间字符串是什么，就显示什么图片#}
+{#                    }#}
+{#                    obj[2].src='/upload/bei1.png';#}
+{#                    obj[5].src='/upload/bei1.png';#}
+{#                }#}
+{#        }#}
+{#        window.setInterval(tick, 1000);#}
+{#        tick();  //为了一开始不显示000000#}
+{#    }#}
+{#</script>#}
+
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>Amadeus - 个人信息</title>
+  <!--favicon-->
+  <link rel="icon" href="../../static/eva/assets/images/logo0.png" type="image/x-icon">
+  <!-- simplebar CSS-->
+  <link href="../../static/eva/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
+  <!-- Bootstrap core CSS-->
+  <link href="../../static/eva/assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- animate CSS-->
+  <link href="../../static/eva/assets/css/animate.css" rel="stylesheet" type="text/css"/>
+  <!-- Icons CSS-->
+  <link href="../../static/eva/assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <!-- Sidebar CSS-->
+  <link href="../../static/eva/assets/css/sidebar-menu.css" rel="stylesheet"/>
+  <!-- Custom Style-->
+  <link href="../../static/eva/assets/css/app-style.css" rel="stylesheet"/>
+  
+</head>
+
+<body class="bg-theme bg-theme2">
+<!-- Start wrapper-->
+ <div id="wrapper">
+
+   <div class="loader-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+
+  <!--Start sidebar-wrapper-->
+   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+     <div class="brand-logo">
+      <a href="/eva">
+       <img src="{% static "eva/assets/images/logo0.png" %}" class="logo-icon" alt="logo icon">
+       <h5 class="logo-text">Amadeus系统</h5>
+     </a>
+   </div>
+   <div class="user-details">
+    <div class="media align-items-center user-pointer collapsed" data-toggle="collapse" data-target="#user-dropdown">
+      <div class="avatar">
+        <img class="mr-3 side-user-img" src="/upload/{{ userinfo.headportrait }}" alt="user avatar" onerror="this.src='/upload/33.jpg'">
+      </div>
+       <div class="media-body">
+       <h6 class="side-user-name">{{ userinfo }}</h6>
+      </div>
+       </div>
+     <div id="user-dropdown" class="collapse">
+      <ul class="user-setting-menu">
+            <li><a href="personalinformation"><i class="icon-user"></i>  个人中心</a></li>
+            <li><a href="javaScript:void(0);"><i class="icon-settings"></i> 设置</a></li>
+      <li><a href="userlogout"><i class="icon-power"></i> 登出</a></li>
+      </ul>
+     </div>
+      </div>
+   <ul class="sidebar-menu do-nicescrol">
+      <li class="sidebar-header">系统服务</li>
+      <li>
+        <a href="javaScript:void(0);" class="waves-effect">
+          <i class="zmdi zmdi-chart"></i> <span>职业数据分析图</span>
+          <i class="fa fa-angle-left float-right"></i>
+        </a>
+        <ul class="sidebar-submenu">
+          <li><a href="charts"><i class="zmdi zmdi-long-arrow-right"></i> 数据图</a></li>
+
+        </ul>
+       </li>
+   </ul>
+
+
+   </div>
+   <!--End sidebar-wrapper-->
+
+<!--Start topbar header-->
+<header class="topbar-nav">
+ <nav class="navbar navbar-expand fixed-top">
+  <ul class="navbar-nav mr-auto align-items-center">
+    <li class="nav-item">
+      <a class="nav-link toggle-menu" href="javaScript:void(0);">
+       <i class="icon-menu menu-icon"></i>
+     </a>
+    </li>
+    <li class="nav-item">
+      <form class="search-bar">
+        <input type="text" class="form-control" placeholder="Enter keywords">
+         <a href="javaScript:void(0);"><i class="icon-magnifier"></i></a>
+      </form>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav align-items-center right-nav-link">
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javaScript:void(0);">
+      <i class="fa fa-envelope-open-o"></i><span class="badge badge-light badge-up">12</span></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="list-group list-group-flush">
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+          You have 12 new messages
+          <span class="badge badge-light">12</span>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="{% static "eva/assets/images/avatars/avatar-5.png" %}" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Jhon Deo</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            <small>Today, 4:10 PM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="{% static "eva/assets/images/avatars/avatar-6.png" %}" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Sara Jen</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            <small>Yesterday, 8:30 AM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="{% static "eva/assets/images/avatars/avatar-7.png" %}" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Dannish Josh</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+             <small>5/11/2018, 2:50 PM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="{% static "eva/assets/images/avatars/avatar-8.png" %}" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Katrina Mccoy</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet.</p>
+            <small>1/11/2018, 2:50 PM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item text-center"><a href="javaScript:void(0);">See All Messages</a></li>
+        </ul>
+        </div>
+    </li>
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javaScript:void(0);">
+    <i class="fa fa-bell-o"></i><span class="badge badge-info badge-up">14</span></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          You have 14 Notifications
+          <span class="badge badge-info">14</span>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <i class="zmdi zmdi-accounts fa-2x mr-3 text-info"></i>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">New Registered Users</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <i class="zmdi zmdi-coffee fa-2x mr-3 text-warning"></i>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">New Received Orders</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <i class="zmdi zmdi-notifications-active fa-2x mr-3 text-danger"></i>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">New Updates</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item text-center"><a href="javaScript:void(0);">See All Notifications</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item language">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javaScript:void(0);"><i class="fa fa-flag"></i></a>
+      <ul class="dropdown-menu dropdown-menu-right">
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-gb mr-2"></i> English</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-fr mr-2"></i> French</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-cn mr-2"></i> Chinese</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-de mr-2"></i> German</li>
+        </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+        <span class="user-profile"><img src="/upload/{{ userinfo.headportrait }}" class="img-circle" alt="user avatar" onerror="this.src='/upload/33.jpg'"></span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right">
+       <li class="dropdown-item user-details">
+        <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="/upload/{{ userinfo.headportrait }}" alt="user avatar" onerror="this.src='/upload/33.jpg'"></div>
+            <div class="media-body">
+            <h6 class="mt-2 user-title">{{ userinfo }}</h6>
+            <p class="user-subtitle">mccoy@example.com</p>
+            </div>
+           </div>
+          </a>
+        </li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+        <li class="dropdown-divider"></li>
+        {% if authentication == '0' %}
+            <a href="authentication"><li class="dropdown-item"><i class="icon-wallet mr-2"></i> 未认证</li></a>
+        {% elif authentication == '1' %}
+            <a href="authentication"><li class="dropdown-item"><i class="icon-wallet mr-2"></i> 等待审核</li></a>
+        {% elif authentication == '2' %}
+           <li class="dropdown-item"><i class="icon-wallet mr-2"></i> 已认证</li>
+        {% endif %}
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-settings mr-2"></i> 设置</li>
+        <li class="dropdown-divider"></li>
+        <a href="userlogout"><li class="dropdown-item"><i class="icon-power mr-2"></i> 登出 </li></a>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</header>
+<!--End topbar header-->
+
+<div class="clearfix"></div>
+	
+  <div class="content-wrapper">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <form id="personal-info" method="POST" enctype="multipart/form-data">{% csrf_token %}
+                <h4 class="form-header text-uppercase">
+                  <i class="fa fa-user-circle-o"></i>
+                   编写资料
+                </h4>
+                <div class="form-group row">
+                  <label for="input-1" class="col-sm-2 col-form-label">昵称</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="input-1" name="nickname" value="{{ userinfo }}">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="input-2" class="col-sm-2 col-form-label">签名</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input-2" name="autograph" value="{{ userinfo.autograph }}">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="input-3" class="col-sm-2 col-form-label">职业</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input-3" name="occupation" value="{{ userinfo.occupation }}">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="input-4" class="col-sm-2 col-form-label">公司</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="input-4" name="company" value="{{ userinfo.company }}">
+                  </div>
+                </div>
+                <h4 class="form-header">
+
+
+                </h4>
+                <div class="form-group row">
+                  <label for="input-5" class="col-sm-2 col-form-label">手机号</label>{{ info_phonenumber }}
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="input-5" name="phonenumber" value="{{ userinfo.phonenumber }}">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="input-6" class="col-sm-2 col-form-label">性别</label>
+                  <div class="col-sm-10">
+                    <select class="form-control" id="sex" name="sex" >
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="input-7" class="col-sm-2 col-form-label">生日</label>
+                  <div class="col-sm-10">
+                   <input class="form-control" type="date"  id="Birthday" name="Birthday" max=""/>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="input-8" class="col-sm-2 col-form-label">头像</label>
+                  <div class="col-sm-10">
+                      <div class="card">
+                        <div class="card-body" >
+                      <div class="col-md-6 col-lg-3 col-xl-3">
+                      <img src="/upload/{{ userinfo.headportrait }}" id="headportrait1" style="width: 150px;height: 150px">
+                      </div>
+                        </div>
+                      </div>
+                    <input type="file" class="form-control" id="headportrait" name="headportrait" value="{{ userinfo.headportrait }}" accept="image/jpeg,image/jpg,image/png">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="input-9" class="col-sm-2 col-form-label">个人说明</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" rows="4" id="personalstatement" name="personalstatement" ></textarea>
+                  </div>
+                </div>
+                <div class="form-footer">
+                    <a href="/eva"><button type="button" class="btn btn-danger"><i class="fa fa-times"></i> 取消</button></a>
+                    <button type="submit" class="btn btn-success"><i class="fa fa-check-square-o"></i> 保存</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div><!--End Row-->
+
+    </div>
+    <!-- End container-fluid-->
+    
+    </div><!--End content-wrapper-->
+   <!--Start Back To Top Button-->
+    <a href="javaScript:void(0);" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+	
+	<!--Start footer-->
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2019 Amadeus
+        </div>
+      </div>
+    </footer>
+	<!--End footer-->
+	
+	<!--start color switcher-->
+   <div class="right-sidebar">
+    <div class="switcher-icon">
+      <i class="zmdi zmdi-settings zmdi-hc-spin"></i>
+    </div>
+    <div class="right-sidebar-content">
+
+      <p class="mb-0">Gaussion Texture</p>
+      <hr>
+      
+      <ul class="switcher">
+        <li id="theme1"></li>
+        <li id="theme2"></li>
+        <li id="theme3"></li>
+        <li id="theme4"></li>
+        <li id="theme5"></li>
+        <li id="theme6"></li>
+      </ul>
+
+      <p class="mb-0">Gradient Background</p>
+      <hr>
+      
+      <ul class="switcher">
+        <li id="theme7"></li>
+        <li id="theme8"></li>
+        <li id="theme9"></li>
+        <li id="theme10"></li>
+        <li id="theme11"></li>
+        <li id="theme12"></li>
+      </ul>
+      
+     </div>
+   </div>
+  <!--end color cwitcher-->
+   
+  </div><!--End wrapper-->
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../../static/eva/assets/js/jquery.min.js"></script>
+  <script src="../../static/eva/assets/js/popper.min.js"></script>
+  <script src="../../static/eva/assets/js/bootstrap.min.js"></script>
+	
+  <!-- simplebar js -->
+  <script src="../../static/eva/assets/plugins/simplebar/js/simplebar.js"></script>
+  <!-- sidebar-menu js -->
+  <script src="../../static/eva/assets/js/sidebar-menu.js"></script>
+  
+  <!-- Custom scripts -->
+  <script src="../../static/eva/assets/js/app-script.js"></script>
+
+  <!--Form Validatin Script-->
+    <script src="../../static/eva/assets/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script>
+        document.getElementById("personalstatement").value="{{ userinfo.personalstatement }}"
+        document.getElementById("sex").value="{{ userinfo.sex }}"
+
+        document.getElementById("Birthday").value="{{ userinfo.Birthday|date:"Y-m-d" }}"
+        $(function(){
+            var date_now = new Date();
+            var year = date_now.getFullYear();
+            var month = date_now.getMonth()+1 < 10 ? "0"+(date_now.getMonth()+1) : (date_now.getMonth()+1);
+            var date = date_now.getDate() < 10 ? "0"+date_now.getDate() : date_now.getDate();
+            var nowDate=year+"-"+month+"-"+date;
+            $("#Birthday").attr("max",nowDate);//最大只能选择到当前日期
+        })
+    </script>
+    <script>
+
+    $().ready(function() {
+
+    $("#personal-info").validate();
+
+   // validate signup form on keyup and submit
+    $("#signupForm").validate({
+        rules: {
+            firstname: "required",
+            lastname: "required",
+            username: {
+                required: true,
+                minlength: 2
+            },
+            password: {
+                required: true,
+                minlength: 5
+            },
+            confirm_password: {
+                required: true,
+                minlength: 5,
+                equalTo: "#password"
+            },
+            email: {
+                required: true,
+                email: true
+            },
+             contactnumber: {
+                required: true,
+                minlength: 10
+            },
+            topic: {
+                required: "#newsletter:checked",
+                minlength: 2
+            },
+            agree: "required"
+        },
+        messages: {
+            firstname: "Please enter your firstname",
+            lastname: "Please enter your lastname",
+            username: {
+                required: "Please enter a username",
+                minlength: "Your username must consist of at least 2 characters"
+            },
+            password: {
+                required: "Please provide a password",
+                minlength: "Your password must be at least 5 characters long"
+            },
+            confirm_password: {
+                required: "Please provide a password",
+                minlength: "Your password must be at least 5 characters long",
+                equalTo: "Please enter the same password as above"
+            },
+            email: "Please enter a valid email address",
+            contactnumber: "Please enter your 10 digit number",
+            agree: "Please accept our policy",
+            topic: "Please select at least 2 topics"
+        }
+    });
+
+});
+  $('#headportrait').on('change',function(){
+            var filePath = $(this).val(), //获取到input的value，里面是文件的路径
+            fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase(),
+	        src = window.URL.createObjectURL(this.files[0]); //转成可以在本地预览的格式
+
+        var imgSize = this.files[0].size;  //b
+        if(imgSize>1024*1024*2.5){//1M
+            return alert("上传图片不能超过2.5M");
+        }
+       if(!fileFormat.match(/.png|.jpg|.jpeg/)) {
+            return alert("图片上传格式不正确");
+        }
+        else{
+		    $('#headportrait1').attr('src', src);
+        }
+    })
+    </script>
+	
+</body>
+</html>

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>Dashtreme - Multipurpose Bootstrap4 Admin Template</title>
+  <!--favicon-->
+  <link rel="icon" href="{% static "eva/assets/images/logo0.png" %}" type="image/x-icon">
+  <!-- vertical timeline CSS-->
+  <link href="{% static "eva/assets/plugins/horizontal-timeline/css/horizontal-timeline.css" %}" rel="stylesheet"/>
+  <!-- simplebar CSS-->
+  <link href="{% static "eva/assets/plugins/simplebar/css/simplebar.css" %}" rel="stylesheet"/>
+  <!-- Bootstrap core CSS-->
+  <link href="{% static "eva/assets/css/bootstrap.min.css" %}" rel="stylesheet"/>
+  <!-- animate CSS-->
+  <link href="{% static "eva/assets/css/animate.css" %}" rel="stylesheet" type="text/css"/>
+  <!-- Icons CSS-->
+  <link href="{% static "eva/assets/css/icons.css" %}" rel="stylesheet" type="text/css"/>
+  <!-- Sidebar CSS-->
+  <link href="{% static "eva/assets/css/sidebar-menu.css" %}" rel="stylesheet"/>
+  <!-- Custom Style-->
+  <link href="{% static "eva/assets/css/app-style.css" %}" rel="stylesheet"/>
+  
+</head>
+
+<body class="bg-theme bg-theme2">
+
+<!-- Start wrapper-->
+ <div id="wrapper">
+
+  <div class="loader-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+ 
+  <!--Start sidebar-wrapper-->
+   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+     <div class="brand-logo">
+      <a href="/eva">
+       <img src="{% static "eva/assets/images/logo0.png" %}" class="logo-icon" alt="logo icon">
+       <h5 class="logo-text">Amadeus系统</h5>
+     </a>
+   </div>
+   <div class="user-details">
+    <div class="media align-items-center user-pointer collapsed" data-toggle="collapse" data-target="#user-dropdown">
+      <div class="avatar">
+        <img class="mr-3 side-user-img" src="/upload/{{ userinfo.headportrait }}" alt="user avatar" onerror="this.src='/upload/33.jpg'">
+      </div>
+       <div class="media-body">
+       <h6 class="side-user-name">{{ userinfo }}</h6>
+      </div>
+       </div>
+     <div id="user-dropdown" class="collapse">
+      <ul class="user-setting-menu">
+            <li><a href="personalinformation"><i class="icon-user"></i>  个人中心</a></li>
+            <li><a href="javaScript:void(0);"><i class="icon-settings"></i> 设置</a></li>
+      <li><a href="userlogout"><i class="icon-power"></i> 登出</a></li>
+      </ul>
+     </div>
+      </div>
+   <ul class="sidebar-menu do-nicescrol">
+      <li class="sidebar-header">系统服务</li>
+      <li>
+        <a href="javaScript:void(0);" class="waves-effect">
+          <i class="zmdi zmdi-chart"></i> <span>职业数据分析图</span>
+          <i class="fa fa-angle-left float-right"></i>
+        </a>
+        <ul class="sidebar-submenu">
+          <li><a href="charts"><i class="zmdi zmdi-long-arrow-right"></i> 数据图</a></li>
+
+        </ul>
+       </li>
+   </ul>
+
+   </div>
+   <!--End sidebar-wrapper-->
+
+<!--Start topbar header-->
+<header class="topbar-nav">
+ <nav class="navbar navbar-expand fixed-top">
+  <ul class="navbar-nav mr-auto align-items-center">
+    <li class="nav-item">
+      <a class="nav-link toggle-menu" href="javascript:void(0);">
+       <i class="icon-menu menu-icon"></i>
+     </a>
+    </li>
+    <li class="nav-item">
+      <form class="search-bar">
+        <input type="text" class="form-control" placeholder="Enter keywords">
+         <a href="javascript:void(0);"><i class="icon-magnifier"></i></a>
+      </form>
+    </li>
+  </ul>
+     
+  <ul class="navbar-nav align-items-center right-nav-link">
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void(0);">
+      <i class="fa fa-envelope-open-o"></i><span class="badge badge-light badge-up">12</span></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="list-group list-group-flush">
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+          You have 12 new messages
+          <span class="badge badge-light">12</span>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="{% static "eva/assets/images/avatars/avatar-5.png"%}" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Jhon Deo</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            <small>Today, 4:10 PM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="{% static "eva/assets/images/avatars/avatar-6.png"%}" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Sara Jen</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            <small>Yesterday, 8:30 AM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="{% static "eva/assets/images/avatars/avatar-7.png"%}" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Dannish Josh</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+             <small>5/11/2018, 2:50 PM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="{% static "eva/assets/images/avatars/avatar-8.png"%}" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Katrina Mccoy</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet.</p>
+            <small>1/11/2018, 2:50 PM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item text-center"><a href="javaScript:void(0);">See All Messages</a></li>
+        </ul>
+        </div>
+    </li>
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void(0);">
+    <i class="fa fa-bell-o"></i><span class="badge badge-info badge-up">14</span></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          You have 14 Notifications
+          <span class="badge badge-info">14</span>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <i class="zmdi zmdi-accounts fa-2x mr-3 text-info"></i>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">New Registered Users</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <i class="zmdi zmdi-coffee fa-2x mr-3 text-warning"></i>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">New Received Orders</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <i class="zmdi zmdi-notifications-active fa-2x mr-3 text-danger"></i>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">New Updates</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item text-center"><a href="javaScript:void(0);">See All Notifications</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item language">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void(0);"><i class="fa fa-flag"></i></a>
+      <ul class="dropdown-menu dropdown-menu-right">
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-gb mr-2"></i> English</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-fr mr-2"></i> French</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-cn mr-2"></i> Chinese</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-de mr-2"></i> German</li>
+        </ul>
+    </li>
+   <li class="nav-item">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+        <span class="user-profile"><img src="/upload/{{ userinfo.headportrait }}" class="img-circle" alt="user avatar" onerror="this.src='/upload/33.jpg'"></span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right">
+       <li class="dropdown-item user-details">
+        <a href="personalinformation">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="/upload/{{ userinfo.headportrait }}" alt="user avatar" onerror="this.src='/upload/33.jpg'"></div>
+            <div class="media-body">
+            <h6 class="mt-2 user-title">{{ userinfo }}</h6>
+            <p class="user-subtitle">mccoy@example.com</p>
+            </div>
+           </div>
+          </a>
+        </li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+        <li class="dropdown-divider"></li>
+{#      <a href="authentication"><li class="dropdown-item"><i class="icon-wallet mr-2"></i> 未认证</li></a>#}
+        {% if authentication == '0' %}
+            <a href="authentication"><li class="dropdown-item"><i class="icon-wallet mr-2"></i> 未认证</li></a>
+        {% elif authentication == '1' %}
+            <a href="authentication"><li class="dropdown-item"><i class="icon-wallet mr-2"></i> 等待审核</li></a>
+        {% elif authentication == '2' %}
+            <li class="dropdown-item"><i class="icon-wallet mr-2"></i> 已认证</li>
+        {% endif %}
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-settings mr-2"></i> 设置</li>
+        <li class="dropdown-divider"></li>
+        <a href="userlogout"><li class="dropdown-item"><i class="icon-power mr-2"></i> 登出 </li></a>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</header>
+<!--End topbar header-->
+
+<div class="clearfix"></div>
+	
+  <div class="content-wrapper">
+    <div class="container-fluid">
+     <!-- Breadcrumb-->
+     <div class="row pt-2 pb-2">
+        <div class="col-sm-9">
+		    <h4 class="page-title">实名认证</h4>
+		    <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javaScript:void(0);">选择类型</a></li>
+            <li class="breadcrumb-item"><a href="javaScript:void(0);">填写资料</a></li>
+            <li class="breadcrumb-item active" aria-current="page">审核</li>
+         </ol>
+	   </div>
+
+     </div>
+    <!-- End Breadcrumb-->
+      <div class="row">
+        <div class="col-lg-12">
+          <section class="cd-horizontal-timeline" >
+            <div class="timeline">
+              <div class="events-wrapper">
+                <div class="events">
+                  <ol>
+                    <li><a href="#0" id="prev1" data-date="01/01/2014" class="selected">认证</a></li>
+
+                    <li><a href="#0" id="next1" data-date="01/03/2014">选择类型</a></li>
+                    <li><a href="#0" id="next2" data-date="01/07/2014">填写资料</a></li>
+                    <li><a href="#0" id="next3" data-date="01/12/2014">审核</a></li>
+
+                  </ol>
+
+                  <span class="filling-line" aria-hidden="true"></span>
+                </div> <!-- .events -->
+              </div> <!-- .events-wrapper -->
+                
+              <ul class="cd-timeline-navigation">
+                <li><a href="#0" class="prev inactive">Prev</a></li>
+                <li><a href="#0" class="next">Next</a></li>
+              </ul> <!-- .cd-timeline-navigation -->
+            </div> <!-- .timeline -->
+
+            <div class="events-content">
+              <ol>
+                <li class="selected" data-date="01/01/2014" style="height: 600px">
+                  <h3>关于认证</h3>
+                  <em>为什么要实名认证?</em>
+                  <p>
+                    1.实名认证是Amadeus系统为用户提供的一套安全、严格的真实性认证体系，可为用户打造一个更安全、更健康的服务环境，能更好地保护企业及用户的合法权益。
+                  </p>
+                  <p>
+                      2.实名认证审核通过后，用户可享有更高调用权限，如人脸识别登录、增加至1000次/天的聊天参数等。
+                  </p>
+                    <p>
+                        3.实名认证用户能优先体验Amadeus系统的各类新功能，以及专项的服务功能等。
+                    </p>
+                    <div style="margin-top: 50px;margin-left: 70%;display: flex">
+                            <button type="button" class="btn btn-light waves-effect waves-light m-1">上一步</button>
+                            <div style="margin-left: 2%">
+                                <button type="button" onclick="next1()" class="btn btn-light waves-effect waves-light m-1" style="background-color: #0dceec">下一步</button>
+                            </div>
+                        </div>
+                </li>
+
+
+
+                <li data-date="01/03/2014" style="height: 600px;">
+
+                  <h3>请选择认证类型</h3>
+                  <em>个体 or 企业</em>
+                    <div style="display: flex; margin-top: 50px;margin-left: 23%">
+                        <p><button type="button" onclick="next2()" class="btn btn-info btn-lg btn-round waves-effect waves-light m-1">个体</button></p>
+                        <div style="margin-left: 16%"><p><button type="button" class="btn btn-info btn-lg btn-round waves-effect waves-light m-1">企业</button></p></div>
+                </div>
+                    <div style="display: flex;margin-left: 23%">
+                    <p style="width: 150px">个体用户的身份信息认证</p>
+                    <div style="margin-left: 12%;width: 150px"><p>企业用户的身份信息认证</p></div>
+                 </div>
+                    <div style="margin-top: 50px;margin-left: 70%;display: flex">
+                            <button type="button" onclick="prev1()" class="btn btn-light waves-effect waves-light m-1">上一步</button>
+
+                        </div>
+                </li>
+
+                <li data-date="01/07/2014" style="height: 1200px">
+                  <h3>填写实名认证资料</h3>
+                  <em>请确保信息的真实性</em>
+                    <form id="" method="POST" enctype="multipart/form-data" target="nm_iframe">{% csrf_token %}
+                    <div style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);border: none;background-color: rgba(0,0,0,.2);height: 1000px;margin-top: 10px">
+                      <div class="col-md-6 col-lg-3 col-xl-3" style="height: 770px;" >
+                            <div class="form-group" style="width: 440%">
+                                <label for="userName2" style="margin-top: 30px">姓名 </label>
+                                <input class="required form-control" id="name" name="name" type="text" value="{{ userinfo }}">
+                            </div>
+                            <div class="form-group" style="width: 440%">
+                                <label for="password2"> 身份证号</label>
+                                <input id="password2" name="idnumber" type="text" class="required form-control" value="{{ userinfo.idnumber }}">
+                            </div>
+
+
+                    <div class="card" style="width: 770px">
+                        <div class="card-body" >
+                            <div class="card-header text-uppercase"><div>身份证正面照</div><div style="margin-left:52%; margin-top: -20px">身份证背面照</div></div>
+                        <div style="display: flex;height: 230px;width: 1000px">
+
+                                <div class="col-md-6 col-lg-3 col-xl-3" style="margin-top: 20px">
+
+
+                                            <img style="height: 70%;width: 200px" src="/upload/idcard2.png" class="lightbox-thumb img-thumbnail" id="photo1"/>
+                                            <input type="file" style="margin-top: 10px" accept="image/jpeg,image/jpg,image/png" id="id1" name="idfrontphoto">
+
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-xl-3" style="margin-left: 12%;margin-top: 20px">
+
+                                            <img style="height: 70%;width: 200px" src="/upload/idcard1.png" class="lightbox-thumb img-thumbnail" id="photo2"/>
+                                            <input type="file" style="margin-top: 10px" accept="image/jpeg,image/jpg,image/png" name="idbackphoto" id="id2">
+
+                                </div>
+
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 770px">
+                        <div class="card-body">
+                            <div class="card-header text-uppercase">近期个人照片</div>
+                                <div class="col-md-6 col-lg-3 col-xl-3" style="margin-top: 20px">
+
+                                      <div style="width:770px;height: 200px; display: inline-block;" id="photo3">
+{#                                          <div style="width: 13.5%;">#}
+{#                                            <img style="height: 70%" src="#" class="lightbox-thumb img-thumbnail" id="photo3"/>#}
+{#                                          </div>#}
+
+
+                                      </div>
+                                <div style="margin-top: -30px" id="addphoto">
+                                    <input type="file" accept="image/jpeg,image/jpg,image/png" id="upload" readonly/>
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                          <button type="button" onclick="face_collection1()" class="btn btn-light waves-effect waves-light m-1">载入人脸数据</button>
+                          <button type="button" style="display: none;" class="btn btn-info waves-effect waves-light btn-sm" id="authentication">载入人脸数据</button>
+                </div>
+                        <div style="margin-top: 120px;margin-left: 70%;display: flex"><button type="button" onclick="next1()" class="btn btn-light waves-effect waves-light m-1">上一步</button>
+                            <div style="margin-left: 2%"> <button type="submit" id="uploadphoto" onclick="next3()"  class="btn btn-light waves-effect waves-light m-1" style="background-color: #0dceec">提交</button>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                    <iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe>
+                </li>
+
+                <li data-date="01/12/2014" style="height: 600px">
+                  <h3>等待审核</h3>
+                  <em>您的个人认证信息已在审核中，请耐心等待哦~</em>
+                  <p>
+
+                  </p>
+                    <div style="margin-top: 50px;margin-left: 70%;display: flex"><button type="button" onclick="next2()" class="btn btn-light waves-effect waves-light m-1">修改信息</button>
+                            <div style="margin-left: 2%"> <a href="/eva"><button type="button"  class="btn btn-light waves-effect waves-light m-1" style="background-color: #0dceec">确定</button></a>
+                            </div>
+                        </div>
+                </li>
+
+
+              </ol>
+            </div> <!-- .events-content -->
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- End container-fluid-->
+    
+    </div><!--End content-wrapper-->
+   <!--Start Back To Top Button-->
+    <a href="javaScript:void(0);" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+	
+	<!--Start footer-->
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2018 Dashtreme Admin
+        </div>
+      </div>
+    </footer>
+	<!--End footer-->
+	
+	<!--start color switcher-->
+   <div class="right-sidebar">
+    <div class="switcher-icon">
+      <i class="zmdi zmdi-settings zmdi-hc-spin"></i>
+    </div>
+    <div class="right-sidebar-content">
+
+      <p class="mb-0">Gaussion Texture</p>
+      <hr>
+      
+      <ul class="switcher">
+        <li id="theme1"></li>
+        <li id="theme2"></li>
+        <li id="theme3"></li>
+        <li id="theme4"></li>
+        <li id="theme5"></li>
+        <li id="theme6"></li>
+      </ul>
+
+      <p class="mb-0">Gradient Background</p>
+      <hr>
+      
+      <ul class="switcher">
+        <li id="theme7"></li>
+        <li id="theme8"></li>
+        <li id="theme9"></li>
+        <li id="theme10"></li>
+        <li id="theme11"></li>
+        <li id="theme12"></li>
+      </ul>
+      
+     </div>
+   </div>
+  <!--end color cwitcher-->
+   
+  </div><!--End wrapper-->
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{% static "eva/assets/js/jquery.min.js" %}"></script>
+  <script src="{% static "eva/assets/js/popper.min.js" %}"></script>
+  <script src="{% static "eva/assets/js/bootstrap.min.js" %}"></script>
+  
+  <!-- simplebar js -->
+  <script src="{% static "eva/assets/plugins/simplebar/js/simplebar.js" %}"></script>
+  <!-- sidebar-menu js -->
+  <script src="{% static "eva/assets/js/sidebar-menu.js" %}"></script>
+  
+  <!-- Custom scripts -->
+  <script src="{% static "eva/assets/js/app-script.js" %}"></script>
+
+  <!-- Vertical timeline js -->
+  <script src="{% static "eva/assets/plugins/horizontal-timeline/js/horizontal-timeline.js" %}"></script>
+  <!--按钮触发事件-->
+  <script src="{% static "eva/assets/plugins/alerts-boxes/js/sweetalert.min.js" %}"></script>
+  <script src="{% static "eva/assets/plugins/alerts-boxes/js/sweet-alert-script.js" %}"></script>
+<script>
+        $('#id1').on('change',function(){
+            var filePath = $(this).val(), //获取到input的value，里面是文件的路径
+            fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase(),
+	        src = window.URL.createObjectURL(this.files[0]); //转成可以在本地预览的格式
+
+        var imgSize = this.files[0].size;  //b
+        if(imgSize>1024*1024*2.5){//1M
+            return alert("上传图片不能超过2.5M");
+        }
+       if(!fileFormat.match(/.png|.jpg|.jpeg/)) {
+            return alert("图片上传格式不正确");
+        }
+        else{
+		    $('#photo1').attr('src', src);
+        }
+    })
+        $('#id2').on('change',function(){
+            var filePath = $(this).val(), //获取到input的value，里面是文件的路径
+            fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase(),
+	        src = window.URL.createObjectURL(this.files[0]); //转成可以在本地预览的格式
+
+        var imgSize = this.files[0].size;  //b
+        if(imgSize>1024*1024*2.5){//1M
+            return alert("上传图片不能超过2.5M");
+        }
+       if(!fileFormat.match(/.png|.jpg|.jpeg/)) {
+            return alert("图片上传格式不正确");
+        }
+        else{
+		    $('#photo2').attr('src', src);
+        }
+    })
+        var num=0;
+        var files = new Array();
+        {#多次触发一个id的方法#}
+         $(document).off('change','#upload').on('change','#upload',function(){
+
+            var image = $(this)[0].files //获取到input的value，里面是文件的路径
+
+            for(i=0;i<image.length;i++) {
+                files[num]=image[i]
+
+                filepath=image[i].name,
+                fileFormat = filepath.split('.')[1].toLowerCase(),
+                src = window.URL.createObjectURL(image[i]); //转成可以在本地预览的格式
+
+                var imgSize = image[i].size;  //b
+                console.log(i)
+
+                if (num == 5) {//不能超过5个
+                    return alert("最多上传5张图片");
+                }
+                if (imgSize >= 1024 * 1024 * 2.5) {//2.5M
+                    return alert("上传图片不能超过2.5M");
+                }
+                if (!fileFormat.match(/png|jpg|jpeg/)) {
+                    return alert("图片上传格式不正确");
+                } else {
+                    num++
+                    console.log(num)
+                    var preview = document.getElementById("photo3")
+                    var preview1 = document.getElementById("addphoto")
+                    var img = document.createElement('img')
+                    var input = document.createElement('input')
+                    {#每次选择图片后原input就消失了。故重新添加一个#}
+                    var input1 = document.createElement('input')
+
+                    {#img.id="photo3"+num#}
+                    img.style="position:relative;width:135px;height:70%;margin-left:1%"
+                    img.className="lightbox-thumb img-thumbnail"
+                    img.src = src
+                    input.type="file"
+                    input1.type="file"
+                    input=document.getElementById("upload")
+
+                    input.style="display:none"
+                    {#img.setAttribute("id","photo3"+num);#}
+                    img.setAttribute("name","photo3"+num);
+                    input.setAttribute("id","photo3"+num);
+                    input.setAttribute("name","photo3"+num);
+                    input1.setAttribute("id","upload");
+                    console.log(img.name)
+                    var deletephoto=document.createElement("span");
+                    deletephoto.style="position: absolute;margin-left:138px;margin-top:-10px"
+                    deletephoto.innerText = 'x';
+                    //把图片名绑定到data里面
+                    deletephoto.id = image[i].name;
+                    //把img和span加入到div中
+                    preview.appendChild(deletephoto);
+                    preview.appendChild(img);
+                    preview.appendChild(input)
+                    preview1.appendChild(input1)
+                    console.log(document.getElementById("photo3"+num))
+                    //点击span事件
+                    $(deletephoto).click(function() {
+                        //获取data中的图片名
+                        var filename = $(this).attr('id');
+                        alert(filename);
+                        //删除图片和input
+                        $(this).remove();
+                        img.remove();
+                        input.remove()
+                        var fileList = Array.from(files);
+                        //遍历数组
+                        for (var j = 0; j < fileList.length; j++) {
+                            //通过图片名判断图片在数组中的位置然后删除
+                                console.log(fileList[j].name)
+                            if (fileList[j].name == filename) {
+                                fileList.splice(j, 1);
+                                num--;
+                                break;
+                            }
+                        }
+
+                        console.log(num)
+                        files = fileList;
+                    });
+                    console.log(files)
+                }
+            }
+    });
+
+     function prev1() {
+         console.log("prev1")
+            $('#prev1')[0].click();
+         }
+    function next2() {
+         console.log("next2")
+            $('#next2')[0].click();
+         }
+    function next3() {
+         console.log("next3")
+            $('#next3')[0].click();
+         }
+     function next1() {
+         console.log("next1")
+            $('#next1')[0].click();
+         }
+    function next2() {
+         console.log("next2")
+            $('#next2')[0].click();
+         }
+    function next3() {
+         console.log("next3")
+            $('#next3')[0].click();
+         }
+	 function face_collection1() {
+         //向nodejs搭建的服务器发送请求
+         $.ajax({
+             type: 'get',
+             url: 'http://127.0.0.1:8000/eva/face_collection1',
+
+             success: function () {
+                 console.log("成功载入人脸数据")
+                 $('#authentication')[0].click();
+             },
+             error: function (err) {
+                 console.log(err)
+             }
+         })
+     }
+     $("#authentication").click(function(){
+          swal("成功载入人脸数据", {
+            icon: "success",
+          });
+     });
+</script>
+</body>
+</html>

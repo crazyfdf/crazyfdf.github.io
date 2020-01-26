@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>Amadeus - 登录</title>
+  <!--favicon-->
+  <link rel="icon" href="../../static/eva/assets/images/logo0.png" type="image/x-icon">
+  <!-- Bootstrap core CSS-->
+  <link href="../../static/eva/assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- animate CSS-->
+  <link href="../../static/eva/assets/css/animate.css" rel="stylesheet" type="text/css"/>
+  <!-- Icons CSS-->
+  <link href="../../static/eva/assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <!-- Custom Style-->
+  <link href="../../static/eva/assets/css/app-style.css" rel="stylesheet"/>
+<style>
+      ul {
+            list-style: none;
+
+        }
+
+        /*清除浮动*/
+        .clearfix {
+            *zoom: 1;
+        }
+        .clearfix:before,.clearfix:after {
+            display: table;
+            line-height: 0;
+            content:  "";
+        }
+        .clearfox:after {
+            clear: both;
+        }
+        .nav {
+            font-family: "Microsoft Yahei";
+        }
+
+        .nav li {
+            float:left;
+        }
+        .nav a {
+
+            box-sizing: border-box;
+            display: inline-block;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .nav a.active>span ,  .nav a:hover>span {
+
+            padding-bottom: 8px;
+            border-bottom:  2px solid #00f2fe;
+        }
+
+</style>
+</head>
+
+<body class="bg-theme bg-theme2">
+<!-- Start wrapper-->
+ <div id="wrapper" style="margin-top: 120px">
+
+  <div class="loader-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+
+	<div class="card card-authentication1 mx-auto my-5 animated bounceInDown">
+
+		<div class="user-lock rounded-top bg-dark-light" >
+{#             <h4 class="text-center mt-5 py-2" style="color: #5e72e4">人工智能</h4>#}
+            <div id="logo" style="width: 280px;height: 90px;margin-top:10px;margin-left: 70px">
+                <img src="{% static "eva/assets/images/logo4.png" %}"  style="width: 100%;height: 100%" class="logo-icon" alt="logo icon">
+            </div>
+            <div style="margin-top: 15px;margin-left: 50px">
+                <ul class="nav clearfix">
+                    <li><a href="userLogin"><span>账号登录</span></a></li>
+                    <li><a href="" class="active" style="margin-left: 195px"><span>人脸登录</span></a></li>
+                </ul>
+            </div>
+              <div class="user-lock-img" style="margin-top: -125px">
+{#                  <img src="../../static/eva/assets/images/avatars/avatar-18.png" alt="user avatar">#}
+
+                      <img src="../../static/eva/assets/images/aii.gif" >
+
+              </div>
+           </div>
+          <div class="card-body" style="margin-top: 50px;margin-left: 120px">
+
+
+                        <a href="face_recognition1">
+                            <button class="btn btn-light waves-effect waves-light m-1" style="background-color: #8DB6CD">人脸识别登录</button>
+                        </a>
+
+{#                  <input type="hidden" name="label">#}
+                    <p style="color: red">{{ info }}</p>
+          </div>
+	     </div>
+
+     <!--Start Back To Top Button-->
+    <a href="javaScript:void(0);" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+
+	<!--start color switcher-->
+   <div class="right-sidebar">
+    <div class="switcher-icon">
+      <i class="zmdi zmdi-settings zmdi-hc-spin"></i>
+    </div>
+    <div class="right-sidebar-content">
+
+      <p class="mb-0">Gaussion Texture</p>
+      <hr>
+
+      <ul class="switcher">
+        <li id="theme1"></li>
+        <li id="theme2"></li>
+        <li id="theme3"></li>
+        <li id="theme4"></li>
+        <li id="theme5"></li>
+        <li id="theme6"></li>
+      </ul>
+
+      <p class="mb-0">Gradient Background</p>
+      <hr>
+
+      <ul class="switcher">
+        <li id="theme7"></li>
+        <li id="theme8"></li>
+        <li id="theme9"></li>
+        <li id="theme10"></li>
+        <li id="theme11"></li>
+        <li id="theme12"></li>
+      </ul>
+
+     </div>
+   </div>
+  <!--end color cwitcher-->
+
+	</div><!--wrapper-->
+
+  <!-- 引导核心JavaScript-->
+  <script src="../../static/eva/assets/js/jquery.min.js"></script>
+  <script src="../../static/eva/assets/js/popper.min.js"></script>
+  <script src="../../static/eva/assets/js/bootstrap.min.js"></script>
+
+  <!--边栏菜单js-->
+  <script src="../../static/eva/assets/js/sidebar-menu.js"></script>
+
+  <!--自定义脚本-->
+  <script src="../../static/eva/assets/js/app-script.js"></script>
+
+  <!-- 登录实现 -->
+  <script src="../../static/eva/assets/js/evaview.js"></script>
+<script>
+    function login() {
+        			    //向nodejs搭建的服务器发送请求
+                 $.ajax({
+                     type: 'get',
+                     url: 'http://127.0.0.1:8000/eva/face_recognition1',
+
+                     success: function () {
+                         console.log("人脸登录成功")
+                         window.location.href='http://127.0.0.1:8000/eva'
+                     },
+                     error: function (err) {
+                         console.log(err)
+                     }
+                 })
+    }
+</script>
+</body>
+</html>

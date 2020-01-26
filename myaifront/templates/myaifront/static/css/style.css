@@ -1,0 +1,159 @@
+html {
+  font-size: 10px;
+}
+.top-menu {
+  background: #0008;
+  color: #fff;
+  padding-top: 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 5rem;
+}
+
+.top-menu .column {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+#banner {
+
+}
+.nav-btn {
+  margin-top: 1rem;
+}
+.nav-btn .column {
+  text-align: center;
+}
+.nav-btn .column img{
+  width: 5rem;
+}
+
+
+.article-list {
+  margin-top: 2rem;
+}
+
+.article-list .article-item {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.article-item img{
+  width: 100%;
+  float: left;
+
+  border-radius: 1rem;
+}
+
+.article-item .title {
+  background: #0006;
+  height: 3rem;
+  float: left;
+  width: 100%;
+  margin-top: -3rem;
+  color: #fff;
+  padding-left: 5px;
+  padding-right: 5px;
+  line-height: 3rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.article-item .title span {
+  float: right;
+}
+
+.clear{
+  clear:both
+}
+
+.tabBar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  height: 4rem;
+}
+
+.tabBar .ui.grid {
+  margin-top:0;
+}
+.tabBar .column {
+  text-align: center;
+}
+
+#login {
+
+}
+
+#login .userUi{
+  position: fixed;
+  top: 20rem;
+  width: 100%;
+  height: 20rem;
+}
+
+#login .userUi .ui.container {
+  background:#fff;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 1px solid #efefef;
+  text-align: center;
+}
+
+#login .userUi .ui.container button{
+  background: #fff;
+  width: 10rem;
+  height: 3rem;
+  margin-left: 1rem;
+  border: 1px solid #b9b9b9;
+  border-radius: 1.5rem;
+}
+
+#login .userUi .ui.container .item{
+  margin-bottom: 1rem;
+  height: 4rem;
+}
+#login .userUi .ui.container .item input{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #b9b9b9;
+  border-radius: 2rem;
+  text-align: center;
+}
+.ai{
+    background-image: url(../image/ai.gif);
+    height:80%;
+    width:100%;
+    overflow: hidden;
+    background-size:cover;
+}
+.btn00{
+
+  background-image: url("../image/btnlogo.png");
+  height:100%;
+  width:100%;
+
+  /*outline: none;*/
+}
+.father{position:fixed;top:40%;left:45%;}
+.son{position: absolute;top:500px;left:0;bottom:0;right:0;width:185px;height:56px;margin:auto;
+    background-color: black;}
+
+.lz{
+    width: 20px;
+    height: 56px;
+}
+
+/*!* Firefox: 移除默认focus样式 *!*/
+/*.btn00::-moz-focus-inner {*/
+/*  border: none;*/
+/*}*/
+/*!* 复用样式 *!*/
+/*.btn00:hover,*/
+/*.btn00:focus {*/
+/*  color: #E0FFFF;*/
+/*  border-color: currentColor;*/
+/*  background-color: white;*/
+/*}*/

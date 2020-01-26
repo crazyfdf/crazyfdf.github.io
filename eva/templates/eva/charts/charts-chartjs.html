@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>Amadeus - 服务系统</title>
+  <!--logo-->
+  <link rel="icon" href="{% static "eva/assets/images/logo0.png" %}" type="image/x-icon">
+  <!-- notifications css -->
+  <link rel="stylesheet" href="{% static "eva/assets/plugins/notifications/css/lobibox.min.css" %}"/>
+  <!-- Vector CSS -->
+  <link href="{% static "eva/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" %}" rel="stylesheet"/>
+  <!-- simplebar CSS-->
+  <link href="{% static "eva/assets/plugins/simplebar/css/simplebar.css" %}" rel="stylesheet"/>
+  <!-- Bootstrap core CSS-->
+  <link href="{% static "eva/assets/css/bootstrap.min.css" %}" rel="stylesheet"/>
+  <!-- animate CSS-->
+  <link href="{% static "eva/assets/css/animate.css" %}" rel="stylesheet" type="text/css"/>
+  <!-- Icons CSS-->
+  <link href="{% static "eva/assets/css/icons.css" %}" rel="stylesheet" type="text/css"/>
+  <!-- Sidebar CSS-->
+  <link href="{% static "eva/assets/css/sidebar-menu.css" %}" rel="stylesheet"/>
+  <!-- Custom Style-->
+  <link href="{% static "eva/assets/css/app-style.css" %}" rel="stylesheet"/>
+
+
+
+ <link rel="stylesheet" type="text/css" href="../../../static/eva/assets/live2d/waifu.css"/>
+
+</head>
+
+<body class="bg-theme bg-theme2">
+
+<!-- Start wrapper-->
+ <div id="wrapper">
+
+   <div class="loader-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+
+  <!--Start sidebar-wrapper-->
+   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+     <div class="brand-logo">
+      <a href="/eva">
+       <img src="{% static "eva/assets/images/logo0.png" %}" class="logo-icon" alt="logo icon">
+       <h5 class="logo-text">Amadeus系统</h5>
+     </a>
+   </div>
+   <div class="user-details">
+    <div class="media align-items-center user-pointer collapsed" data-toggle="collapse" data-target="#user-dropdown">
+      <div class="avatar">
+        <img class="mr-3 side-user-img" src="/upload/{{ userinfo.headportrait }}" alt="user avatar" onerror="this.src='/upload/33.jpg'">
+      </div>
+       <div class="media-body">
+       <h6 class="side-user-name">{{ userinfo }}</h6>
+      </div>
+       </div>
+     <div id="user-dropdown" class="collapse">
+      <ul class="user-setting-menu">
+            <li><a href="personalinformation"><i class="icon-user"></i>  个人中心</a></li>
+            <li><a href="javaScript:void(0);"><i class="icon-settings"></i> 设置</a></li>
+      <li><a href="userlogout"><i class="icon-power"></i> 登出</a></li>
+      </ul>
+     </div>
+      </div>
+   <ul class="sidebar-menu do-nicescrol">
+      <li class="sidebar-header">系统服务</li>
+      <li>
+        <a href="javaScript:void(0);" class="waves-effect">
+          <i class="zmdi zmdi-chart"></i> <span>职业数据分析图</span>
+          <i class="fa fa-angle-left float-right"></i>
+        </a>
+        <ul class="sidebar-submenu">
+          <li><a href="charts"><i class="zmdi zmdi-long-arrow-right"></i> 数据图</a></li>
+
+        </ul>
+       </li>
+   </ul>
+   </div>
+   <!--End sidebar-wrapper-->
+
+<!--Start topbar header-->
+<header class="topbar-nav">
+ <nav class="navbar navbar-expand fixed-top">
+  <ul class="navbar-nav mr-auto align-items-center">
+    <li class="nav-item">
+      <a class="nav-link toggle-menu" href="javascript:void(0);">
+       <i class="icon-menu menu-icon"></i>
+     </a>
+    </li>
+    <li class="nav-item">
+      <form class="search-bar">
+        <input type="text" class="form-control" placeholder="Enter keywords">
+         <a href="javascript:void(0);"><i class="icon-magnifier"></i></a>
+      </form>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav align-items-center right-nav-link">
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void(0);">
+      <i class="fa fa-envelope-open-o"></i><span class="badge badge-light badge-up">12</span></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="list-group list-group-flush">
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+          You have 12 new messages
+          <span class="badge badge-light">12</span>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="assets/images/avatars/avatar-5.png" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Jhon Deo</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            <small>Today, 4:10 PM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="assets/images/avatars/avatar-6.png" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Sara Jen</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+            <small>Yesterday, 8:30 AM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="assets/images/avatars/avatar-7.png" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Dannish Josh</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet...</p>
+             <small>5/11/2018, 2:50 PM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item">
+          <a href="javaScript:void(0);">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="assets/images/avatars/avatar-8.png" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-0 msg-title">Katrina Mccoy</h6>
+            <p class="msg-info">Lorem ipsum dolor sit amet.</p>
+            <small>1/11/2018, 2:50 PM</small>
+            </div>
+          </div>
+          </a>
+          </li>
+          <li class="list-group-item text-center"><a href="javaScript:void(0);">See All Messages</a></li>
+        </ul>
+        </div>
+    </li>
+        <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javaScript:void(0);">
+    <i class="fa fa-bell-o"></i><span class="badge badge-info badge-up">14</span></a>
+{#      <div class="dropdown-menu dropdown-menu-right">#}
+{#        <ul class="list-group list-group-flush">#}
+{#          <li class="list-group-item d-flex justify-content-between align-items-center">#}
+{#          You have 14 Notifications#}
+{#          <span class="badge badge-info">14</span>#}
+{#          </li>#}
+{#          <li class="list-group-item">#}
+{#          <a href="javaScript:void(0);">#}
+{#           <div class="media">#}
+{#             <i class="zmdi zmdi-accounts fa-2x mr-3 text-info"></i>#}
+{#            <div class="media-body">#}
+{#            <h6 class="mt-0 msg-title">New Registered Users</h6>#}
+{#            <p class="msg-info">Lorem ipsum dolor sit amet...</p>#}
+{#            </div>#}
+{#          </div>#}
+{#          </a>#}
+{#          </li>#}
+{#          <li class="list-group-item">#}
+{#          <a href="javaScript:void(0);">#}
+{#           <div class="media">#}
+{#             <i class="zmdi zmdi-coffee fa-2x mr-3 text-warning"></i>#}
+{#            <div class="media-body">#}
+{#            <h6 class="mt-0 msg-title">New Received Orders</h6>#}
+{#            <p class="msg-info">Lorem ipsum dolor sit amet...</p>#}
+{#            </div>#}
+{#          </div>#}
+{#          </a>#}
+{#          </li>#}
+{#          <li class="list-group-item">#}
+{#          <a href="javaScript:void(0);">#}
+{#           <div class="media">#}
+{#             <i class="zmdi zmdi-notifications-active fa-2x mr-3 text-danger"></i>#}
+{#            <div class="media-body">#}
+{#            <h6 class="mt-0 msg-title">New Updates</h6>#}
+{#            <p class="msg-info">Lorem ipsum dolor sit amet...</p>#}
+{#            </div>#}
+{#          </div>#}
+{#          </a>#}
+{#          </li>#}
+{#          <li class="list-group-item text-center"><a href="javaScript:void(0);">See All Notifications</a></li>#}
+{#        </ul>#}
+{#      </div>#}
+    </li>
+    <li class="nav-item language">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javaScript:void(0);"><i class="fa fa-flag"></i></a>
+      <ul class="dropdown-menu dropdown-menu-right">
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-gb mr-2"></i> English</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-fr mr-2"></i> French</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-cn mr-2"></i> Chinese</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-de mr-2"></i> German</li>
+        </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+        <span class="user-profile"><img src="/upload/{{ userinfo.headportrait }}" class="img-circle" alt="user avatar" onerror="this.src='/upload/33.jpg'"></span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right">
+       <li class="dropdown-item user-details">
+        <a href="personalinformation">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="/upload/{{ userinfo.headportrait }}" alt="user avatar" onerror="this.src='/upload/33.jpg'"></div>
+            <div class="media-body">
+            <h6 class="mt-2 user-title">{{ userinfo }}</h6>
+            <p class="user-subtitle">mccoy@example.com</p>
+            </div>
+           </div>
+          </a>
+        </li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+        <li class="dropdown-divider"></li>
+
+        {% if authentication == '0' %}
+            <a href="authentication"><li class="dropdown-item"><i class="icon-wallet mr-2"></i> 未认证</li></a>
+        {% elif authentication == '1' %}
+            <a href="authentication"><li class="dropdown-item"><i class="icon-wallet mr-2"></i> 等待审核</li></a>
+        {% elif authentication == '2' %}
+            <li class="dropdown-item"><i class="icon-wallet mr-2"></i> 已认证</li>
+        {% endif %}
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-settings mr-2"></i> 设置</li>
+        <li class="dropdown-divider"></li>
+        <a href="userLogin"><li class="dropdown-item"><i class="icon-power mr-2"></i> 登出 </li></a>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</header>
+<!--End topbar header-->
+
+<div class="clearfix"></div>
+
+  <div class="content-wrapper">
+    <div class="container-fluid">
+     <!-- Breadcrumb-->
+        <form id="personal-info" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <div class="form-group row" >
+                  <label for="input-1" class="col-sm-2 col-form-label" style="margin-top: 4.1px">标题</label>
+
+                  <div class="col-sm-10"style="display: flex;">
+                      <input type="text" class="form-control" style="width: 250px;margin-left: -230px;margin-top: 4.1px" id="input-1" name="content">
+{#                      <input type="text" min="1" max="15" class="form-control" id="input-2" name="page1"  style="width: 70px;margin-left: 10px;margin-top: 4.1px">#}
+                      <button type="button" class="btn btn-light waves-effect waves-light m-1" onclick="re()">
+                          <i class="fa fa-search"></i>
+                          <span>搜索</span>
+                      </button>
+{#                      <button style="margin-left: 20px" class="btn btn-dark" onclick="re()">开始爬虫</button>#}
+                  </div>
+{#                 <label for="input-2" class="col-sm-2 col-form-label">页数</label>#}
+{#                  <div class="col-sm-10">#}
+{#                    <input type="number" min="1" class="form-control" id="input-1" name="page">#}
+{#                  </div>#}
+
+            </div>
+
+        </form>
+
+<div class="row">
+        <div class="col-lg-6 col-xl-6">
+          <div class="card" style="width:1633px;">
+            <div class="card-header text-uppercase">地区分布条形图</div>
+           <div class="card-body"><div style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+
+               <div id="page0" style="width:1400px;margin-top:100px;margin-left:-50px;height: 700px"></div>
+             </div>
+          </div>
+        </div>
+
+      </div><!--End Row-->
+</div>
+
+	   <div class="row">
+        <div class="col-lg-6 col-xl-6">
+          <div class="card">
+            <div class="card-header text-uppercase">工作经验</div>
+            <div class="card-body"><div style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+
+                <div id="page2"></div>
+            </div>
+          </div>
+        </div>
+           <div class="col-lg-6 col-xl-6">
+          <div class="card">
+            <div class="card-header text-uppercase">学历情况</div>
+            <div class="card-body"><div style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+
+                <div id="page1" style="margin-left:-20px"></div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+      <div class="row">
+          <div class="col-lg-6 col-xl-6">
+          <div class="card" style="width: 1648px;">
+            <div class="card-header text-uppercase">薪资待遇</div>
+            <div class="card-body"><div style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+
+                <div id="page3" style="height: 650px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- End container-fluid-->
+
+    </div><!--End content-wrapper-->
+   <!--Start Back To Top Button-->
+    <a href="javaScript:void(0);" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+
+	<!--Start footer-->
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          Copyright © 2018 Dashtreme Admin
+        </div>
+      </div>
+    </footer>
+	<!--End footer-->
+
+	<!--start color switcher-->
+   <div class="right-sidebar">
+    <div class="switcher-icon">
+      <i class="zmdi zmdi-settings zmdi-hc-spin"></i>
+    </div>
+    <div class="right-sidebar-content">
+
+      <p class="mb-0">Gaussion Texture</p>
+      <hr>
+
+      <ul class="switcher">
+        <li id="theme1"></li>
+        <li id="theme2"></li>
+        <li id="theme3"></li>
+        <li id="theme4"></li>
+        <li id="theme5"></li>
+        <li id="theme6"></li>
+      </ul>
+
+      <p class="mb-0">Gradient Background</p>
+      <hr>
+
+      <ul class="switcher">
+        <li id="theme7"></li>
+        <li id="theme8"></li>
+        <li id="theme9"></li>
+        <li id="theme10"></li>
+        <li id="theme11"></li>
+        <li id="theme12"></li>
+      </ul>
+
+     </div>
+   </div>
+  <!--end color cwitcher-->
+
+  </div><!--End wrapper-->
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{% static "eva/assets/js/jquery.min.js" %}"></script>
+  <script src="{% static "eva/assets/js/jquery-ui.min.js" %}"></script>
+  <script src="{% static "eva/assets/js/popper.min.js" %}"></script>
+  <script src="{% static "eva/assets/js/bootstrap.min.js" %}"></script>
+
+ <!-- simplebar js -->
+  <script src="{% static "eva/assets/plugins/simplebar/js/simplebar.js" %}"></script>
+  <!-- sidebar-menu js -->
+  <script src="{% static "eva/assets/js/sidebar-menu.js" %}"></script>
+  <!-- loader scripts -->
+  <script src="{% static "eva/assets/js/jquery.loading-indicator.js" %}"></script>
+  <!-- Custom scripts -->
+  <script src="{% static "eva/assets/js/app-script.js" %}"></script>
+  <!-- Chart js -->
+
+  <script src="{% static "eva/assets/plugins/Chart.js/Chart.min.js" %}"></script>
+  <!-- Vector map JavaScript -->
+  <script src="{% static "eva/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js" %}"></script>
+  <script src="{% static "eva/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js" %}"></script>
+  <!-- Easy Pie Chart JS -->
+  <script src="{% static "eva/assets/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js" %}"></script>
+  <!-- Sparkline JS -->
+  <script src="{% static "eva/assets/plugins/sparkline-charts/jquery.sparkline.min.js" %}"></script>
+  <script src="{% static "eva/assets/plugins/jquery-knob/excanvas.js" %}"></script>
+  <script src="{% static "eva/assets/plugins/jquery-knob/jquery.knob.js" %}"></script>
+    <!-- 提示 JS -->
+  <script src="{% static "eva/assets/plugins/notifications/js/notification-custom-script.js" %}"></script>
+  <script src="{% static "eva/assets/plugins/notifications/js/lobibox.min.js" %}"></script>
+  <script src="{% static "eva/assets/plugins/notifications/js/notifications.min.js" %}"></script>
+  <!--按钮触发事件-->
+  <script src="{% static "eva/assets/plugins/alerts-boxes/js/sweetalert.min.js" %}"></script>
+  <script src="{% static "eva/assets/plugins/alerts-boxes/js/sweet-alert-script.js" %}"></script>
+
+
+    <script src="../../static/eva/assets/live2d/waifu-tips.js"></script>
+    <script src="../../static/eva/assets/live2d/live2d.js"></script>
+    <script type="text/javascript">initModel("../../static/eva/assets/live2d/")</script>
+  <!-- Index js -->
+  <script src="{% static "eva/assets/js/index.js" %}"></script>
+
+<script>
+      function anim1_noti1(){
+			Lobibox.notify('info', {
+		    pauseDelayOnHover: true,
+            continueDelayOnInactiveTab: false,
+		    position: 'center top',
+		    showClass: 'fadeInDown',
+            hideClass: 'fadeOutDown',
+            width: 600,
+		    msg: '快来和我聊天啦~~~.'
+		    });
+			    //向nodejs搭建的服务器发送请求
+                 $.ajax({
+                     type: 'get',
+                     url: 'http://127.0.0.1:8000/eva/ai',
+
+                     success: function () {
+                         console.log("开始交流")
+                     },
+                     error: function (err) {
+                         console.log(err)
+                     }
+                 })
+      };
+      function re(){
+			Lobibox.notify('info', {
+		    pauseDelayOnHover: true,
+            continueDelayOnInactiveTab: false,
+		    position: 'center top',
+		    showClass: 'fadeInDown',
+            hideClass: 'fadeOutDown',
+            width: 600,
+		    msg: '正在爬虫~~~.'
+		    });
+			    //向nodejs搭建的服务器发送请求
+                 $.ajax({
+                     type: 'get',
+                     url: 'http://127.0.0.1:8000/eva/reptile',
+
+                     success: function () {
+                         console.log("开始爬虫")
+                     },
+                     error: function (err) {
+                         console.log(err)
+                     }
+                 })
+      }
+</script>
+<script>
+    $("#page0").load("a");
+    $("#page1").load("c");
+    $("#page2").load("d");
+
+    $("#page3").load("e");
+</script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>Amadeus - 注册</title>
+  <!--favicon-->
+  <link rel="icon" href="../../static/eva/assets/images/logo0.png" type="image/x-icon">
+  <!-- Bootstrap core CSS-->
+  <link href="../../static/eva/assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- animate CSS-->
+  <link href="../../static/eva/assets/css/animate.css" rel="stylesheet" type="text/css"/>
+  <!-- Icons CSS-->
+  <link href="../../static/eva/assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <!-- Custom Style-->
+  <link href="../../static/eva/assets/css/app-style.css" rel="stylesheet"/>
+
+</head>
+
+<body class="bg-theme bg-theme2">
+
+<!-- Start wrapper-->
+ <div id="zc">
+
+  <div class="loader-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+
+	   <div class="card-authentication2 mx-auto my-3">
+
+	    <div class="card-group">
+	    	<!--<div class="card mb-0">
+	    	   <div class="bg-signup2"></div>
+	    		<div class="card-img-overlay rounded-left my-5">
+                 <h2 class="text-white">Lorem</h2>
+                 <h1 class="text-white">Ipsum Dolor</h1>
+                 <p class="card-text text-white pt-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+             </div>
+	    	</div>-->
+
+	    	<div class="card mb-0">
+	    		<div class="card-body">
+	    			<div class="card-content p-3">
+	    				<div class="text-center">
+					 		<img src="../../static/eva/assets/images/logo0.png" alt="logo icon" style="width: 150px;height: 140px">
+					 	</div>
+					 <div class="card-title text-uppercase text-center py-3">注 册 你 的 账 号</div>
+					    <form method="POST">{% csrf_token %}
+						  <div class="form-group">
+						   <div class="position-relative has-icon-left">
+							  <label for="username" class="sr-only">用户名</label>
+							  <input type="text" name="username" class="form-control" placeholder="用户名"/>
+							  <div class="form-control-position">
+								  <i class="icon-user"></i>
+							  </div>
+						   </div>
+						  </div>
+						  <div class="form-group">
+						   <div class="position-relative has-icon-left">
+							  <label for="email" class="sr-only">邮箱</label>
+							  <input type="email" name="email" class="form-control" placeholder="邮箱">
+							  <div class="form-control-position">
+								  <i class="icon-envelope-open"></i>
+							  </div>
+						   </div>
+						  </div>
+						  <div class="form-group">
+						   <div class="position-relative has-icon-left">
+							  <label for="password" class="sr-only">密码</label>
+							  <input type="password" name="password" class="form-control" placeholder="密码">
+							  <div class="form-control-position">
+								  <i class="icon-lock"></i>
+							  </div>
+						   </div>
+						  </div>
+						  <div class="form-group">
+						   <div class="position-relative has-icon-left">
+							  <label for="password1" class="sr-only">确认密码</label>
+							  <input type="password" name="password1" class="form-control" placeholder="确认密码">
+							  <div class="form-control-position">
+								  <i class="icon-lock"></i>
+							  </div>
+						   </div>
+						  </div>
+						  <div class="form-group">
+						   <div class="icheck-material-white">
+			                <input type="checkbox" name="user-checkbox" checked="" />
+			                <label for="user-checkbox">我接受条款和条件</label>
+						  </div>
+						 </div>
+                            <p style="color: red">{{ info }}</p>
+						 <button type="submit" value="提交" class="btn btn-light btn-block waves-effect waves-light">注册</button>
+						 <div class="text-center pt-3">
+
+						 <div class="form-row mt-4">
+
+						   <button type="button" class="btn btn-light btn-block"><i class="fa fa-facebook-square"></i> 相关条款</button>
+
+						 <!--<div class="form-group mb-0 col-6 text-right">
+						  <button type="button" class="btn btn-light btn-block"><i class="fa fa-twitter-square"></i> Twitter</button>
+						 </div>-->
+						</div>
+
+						 <hr>
+
+						 <p class="text-warning">已经有帐户了? <a href="userLogin"> 在此处登录</a></p>
+						 </div>
+					</form>
+				 </div>
+				</div>
+	    	</div>
+	     </div>
+	    </div>
+
+     <!--Start Back To Top Button-->
+    <a href="javaScript:void(0);" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+
+	<!--start color switcher-->
+   <div class="right-sidebar">
+    <div class="switcher-icon">
+      <i class="zmdi zmdi-settings zmdi-hc-spin"></i>
+    </div>
+    <div class="right-sidebar-content">
+
+      <p class="mb-0">Gaussion Texture</p>
+      <hr>
+
+      <ul class="switcher">
+        <li id="theme1"></li>
+        <li id="theme2"></li>
+        <li id="theme3"></li>
+        <li id="theme4"></li>
+        <li id="theme5"></li>
+        <li id="theme6"></li>
+      </ul>
+
+      <p class="mb-0">Gradient Background</p>
+      <hr>
+
+      <ul class="switcher">
+        <li id="theme7"></li>
+        <li id="theme8"></li>
+        <li id="theme9"></li>
+        <li id="theme10"></li>
+        <li id="theme11"></li>
+        <li id="theme12"></li>
+      </ul>
+
+     </div>
+   </div>
+  <!--end color cwitcher-->
+
+	</div><!--wrapper-->
+
+  <!-- 引导核心JavaScript-->
+  <script src="../../static/eva/assets/js/jquery.min.js"></script>
+  <script src="../../static/eva/assets/js/popper.min.js"></script>
+  <script src="../../static/eva/assets/js/bootstrap.min.js"></script>
+
+  <!--边栏菜单js-->
+  <script src="../../static/eva/assets/js/sidebar-menu.js"></script>
+
+  <!--自定义脚本-->
+  <script src="../../static/eva/assets/js/app-script.js"></script>
+
+  <!-- 注册实现 -->
+  <script src="../../static/eva/assets/js/vue.js"></script>
+  <script src="../../static/eva/assets/js/evaview.js"></script>
+ <script src="../../static/eva/assets/js/jquery.min.js"></script>
+<script type="text/javascript">
+     var csrftoken = Cookies.get('csrftoken')
+     console.log(csrftoken)
+ </script>
+<script>
+    new Vue({
+        el:'#zc',
+        data:{
+        u:{}
+        },
+        mounted:function(){},
+        methods: {
+            tijiao:function(){
+                alert("tijiao")
+            },
+            userregistration: function () {
+                var self = this
+                console.log('hello')
+                reqwest({
+
+                    url: '/eva/userregistration',
+                    method: 'post',
+                    type:'json',
+                    headers:{
+                        "X-CSRFTOKEN":csrftoken
+                    },
+                    data: {
+                        username: self.username,
+                        password: self.password
+                    },
+                    headers: {
+                        "X-CSRFTOKEN": csrftoken
+                    },
+                    success: function (data) {
+                        console.log('ok')
+
+                    },
+                    error: function (err) {
+                        console.log(err)
+                    }
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>
