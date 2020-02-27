@@ -241,9 +241,9 @@
             <a href="authentication"><li class="dropdown-item"><i class="icon-wallet mr-2"></i> 已认证</li></a>
         {% endif %}
         <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+        <li class="dropdown-item"><i class="icon-settings mr-2"></i> 设置</li>
         <li class="dropdown-divider"></li>
-        <a href="userLogin"><li class="dropdown-item"><i class="icon-power mr-2"></i> Logout </li></a>
+        <a href="userlogout"><li class="dropdown-item"><i class="icon-power mr-2"></i> 登出 </li></a>
       </ul>
     </li>
   </ul>
@@ -255,8 +255,11 @@
 
   <div class="content-wrapper">
     <div class="container-fluid">
-        <a href="face_verification" id="examination1" style="display: none"></a><a href="face_verification1" id="examination2" style="display: none"></a>
-
+{#        <a href="face_verification" id="examination1" style="display: none"></a>#}
+{#        <a href="face_verification1" id="examination2" style="display: none"></a>#}
+        <button id="examination2" onclick="examination2()" style="display: none"></button>
+        <button id="round_success_noti1" onclick="round_success_noti1()" style="display: none"></button>
+        <button id="round_success_noti2" onclick="round_success_noti2()" style="display: none"></button>
         <div class="progress-wrapper">
 			   <div class="progress mb-4" style="height:15px;">
 				<div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width:80%">80%</div>
@@ -343,7 +346,7 @@
 {#                                                      <li class="list-group-item d-flex justify-content-between align-items-center">Vestibulum at eros <span class="badge badge-danger">1</span></li>#}
 {#                                                    </ul>#}
                                                     <div class="card-body">
-                                                        <button class="btn btn-outline-primary btn-block m-1" data-toggle="modal" data-target="#primarymodal" onclick="examination()">审查人脸图片</button>
+                                                        <button class="btn btn-outline-primary btn-block m-1" data-toggle="modal"  onclick="examination()">审查人脸图片</button>
 {#                                                              <button class="btn btn-dark" onclick="examination()">审查人脸图片</button>#}
                                                         <button class="btn btn-outline-info btn-block m-1" data-toggle="modal" data-target="#infomodal" id="authentication">人脸图片制作数据</button>
 {#                                                        <button type="button" class="btn btn-info waves-effect waves-light btn-sm" id="authentication">人脸图片制作数据</button>#}
@@ -428,8 +431,7 @@
   <script src="{% static "eva/assets/plugins/simplebar/js/simplebar.js" %}"></script>
   <!-- sidebar-menu js -->
   <script src="{% static "eva/assets/js/sidebar-menu.js" %}"></script>
-  <!-- loader scripts -->
-  <script src="{% static "eva/assets/js/jquery.loading-indicator.js" %}"></script>
+
   <!-- Custom scripts -->
   <script src="{% static "eva/assets/js/app-script.js" %}"></script>
   <!-- Chart js -->
@@ -458,52 +460,120 @@
             $(".knob").knob();
         });
         {#自动刷新一次#}
-        $(document).ready(function () {
-
-             if(location.href.indexOf("#reloaded")==-1){
-                location.href=location.href+"#reloaded";
-                location.reload();
-            }
-        });
+        {#$(document).ready(function () {#}
+        {##}
+        {#     if(location.href.indexOf("#reloaded")==-1){#}
+        {#        location.href=location.href+"#reloaded";#}
+        {#        location.reload();#}
+        {#    }#}
+        {# });#}
          $("#authentication").click(function(){
 
                   swal({
                     title: "是否确定加载人脸数据?",
                     text: "请审查核实后选择!",
-                    icon: "警告",
+                    icon: "warning",
                     buttons: true,
                     dangerMode: true,
                   })
                   .then((willDelete) => {
                     if (willDelete) {
-                      swal("系统开始重新加载人脸数据", {
-                        icon: "success",
-                      });
+                      $('#round_success_noti1')[0].click();
                       $('#examination2')[0].click();
                     } else {
-                      swal("Your imaginary file is safe!");
+                      swal("你的人脸数据是安全的!");
                     }
                   });
 
               });
-        function examination(){
-			Lobibox.notify('default', {
-		    pauseDelayOnHover: true,
-            continueDelayOnInactiveTab: false,
-		    position: 'center top',
-		    showClass: 'fadeInDown',
-            hideClass: 'fadeOutDown',
-            width: 600,
-		    msg: 'Lorem ipsum dolor sit amet hears farmer indemnity inherent.'
+        {#function examination(){#}
+		{#	Lobibox.notify('default', {#}
+		{#    pauseDelayOnHover: true,#}
+        {#    continueDelayOnInactiveTab: false,#}
+		{#    position: 'center top',#}
+		{#    showClass: 'fadeInDown',#}
+        {#    hideClass: 'fadeOutDown',#}
+        {#    width: 600,#}
+		{#    msg: 'Lorem ipsum dolor sit amet hears farmer indemnity inherent.'#}
+        {##}
+		{#    });#}
+		{#	console.log('1')#}
+		{#	$('#examination1')[0].click();#}
+		{#  }#}
+		      function examination() {
+                //向nodejs搭建的服务器发送请求
+                  $('#round_success_noti2')[0].click();
+                 $.ajax({
+                     type: 'get',
+                     url: 'http://127.0.0.1:8000/eva/face_verification',
+                     success: function (data) {
+                         if (data.res == 200){
+                             console.log(111111111)
+                              swal("Good job!", "未发现错误图片", "success");
+                         }
+                         else{
+                            console.log(222222222)
+                              swal("Warning!", "发现错误图片："+data.info+"。请手动删除错误图片后再制作人脸数据！", "warning");
+                         };
+                     },
+                     error: function (err) {
+                         alert('审核失败');
+                         console.log(err)
+                     }
+                 })
+    };
+		      function examination2() {
+                //向nodejs搭建的服务器发送请求
+                 $.ajax({
+                     type: 'get',
+                     url: 'http://127.0.0.1:8000/eva/face_verification1',
+                     success: function (data) {
+                         if (data.res == 200){
+                             console.log(33333)
+                              swal("制作人脸数据成功", {
+                                icon: "success",
+                              });
+                         }
+                         else{
+                            console.log(44444)
+                                 swal("Somthing Wrong!", "制作失败", "error");
 
+                         };
+                     },
+                     error: function (err) {
+                         alert('审核失败');
+                         console.log(err)
+                     }
+                 })
+    };
+        function round_success_noti1(){
+			Lobibox.notify('success', {
+		    pauseDelayOnHover: true,
+		    size: 'mini',
+		    rounded: true,
+		    icon: 'fa fa-check-circle',
+		    delayIndicator: false,
+            continueDelayOnInactiveTab: false,
+		    position: 'top right',
+		    msg: '正在制作人脸数据，请耐心等候~.'
 		    });
-			console.log('1')
-			$('#examination1')[0].click();
-		  }
+		  };
+        function round_success_noti2(){
+			Lobibox.notify('success', {
+		    pauseDelayOnHover: true,
+		    size: 'mini',
+		    rounded: true,
+		    icon: 'fa fa-check-circle',
+		    delayIndicator: false,
+            continueDelayOnInactiveTab: false,
+		    position: 'top right',
+		    msg: '正在审核人脸图片，请耐心等候~.'
+		    });
+		  };
     </script>
 
   <!-- Index js -->
-  <script src="{% static "eva/assets/js/index.js" %}"></script>
+{#  <script src="{% static "eva/assets/js/index.js" %}"></script>#}
 
 
 </body>

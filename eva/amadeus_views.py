@@ -45,7 +45,6 @@ def index(request):
     if username=="admin":
         return index1(request)
     else:
-
         return render(request, 'eva/Amadeus-index.html', context)
 
 #管理员主页
@@ -76,10 +75,7 @@ def index1(request):
                 pass
 
     try:
-
-
         userinfo1 = Userinfo.objects.get(belong=UserProfile.objects.filter(username=request.session['username'])[0])
-
         context = {
             'userinfo': userinfo1,
             'authentication': userinfo.status,
@@ -104,6 +100,7 @@ def ai(request):
 
     if globalvariable.flag:
         # aimain(request,globalvariable.flag)
+
         try:
             ai_speech(globalvariable.ai_speak)
             play()

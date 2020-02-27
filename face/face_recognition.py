@@ -16,28 +16,29 @@ class Face_recognition:
         # 128维的空向量
         data=np.zeros((1,128))
 
-        for file in os.listdir(path):
+        # for file in os.listdir(path):
 
-            path = os.path.join(settings.MEDIA_ROOT, "photo")
-            path=os.path.join(path,file)
-            feature_tmp = np.zeros((1, 128))
-            label_name = file
-            num = 0
-            for image in os.listdir(path):
-                if '.png' in image or '.jpg' in image or '.jpeg' in image:
-                    num += 1
+            # path = os.path.join(settings.MEDIA_ROOT, "photo")
+            # path=os.path.join(path,file)
+            # feature_tmp = np.zeros((1, 128))
+            # label_name = file
+        num = 0
+        for image in os.listdir(path):
+            if '.png' in image or '.jpg' in image or '.jpeg' in image:
+                num += 1
 
-                    file_path = os.path.join(path, image)
-                    # path = os.path.dirname(path)
+                file_path = os.path.join(path, image)
+                # path = os.path.dirname(path)
 
-                    try:
-                        len(self.face_features(file_path))
-                            # feature_tmp += self.face_features(file_path)
-                    except Exception as e:
-                        print('错误图片: {}'.format(file_path))
-                        if os.path.isfile(file_path):
-                            os.remove(file_path)
-                        pass
+                try:
+                    len(self.face_features(file_path))
+                        # feature_tmp += self.face_features(file_path)
+                except Exception as e:
+                    print('错误图片: {}'.format(file_path))
+                    if os.path.isfile(file_path):
+                        os.remove(file_path)
+                    pass
+                    return file_path
 
 
     # 遍历图片目录
@@ -65,40 +66,51 @@ class Face_recognition:
         return face_array
 
     # 添加标签
-    def face_label(self,path):
+    def face_label(self,path,name):
         # 用于存放人脸的标记
         label=[]
         # 128维的空向量
         data=np.zeros((1,128))
 
-        for file in os.listdir(path):
-            path = os.path.join(settings.MEDIA_ROOT, "photo")
-            path=os.path.join(path,file)
-            feature_tmp = np.zeros((1, 128))
-            label_name = file
-            num = 0
-            for image in os.listdir(path):
-                if '.png' in image or '.jpg' in image or '.jpeg' in image:
-                    num += 1
+        # for file in os.listdir(path):
+        #     path = os.path.join(settings.MEDIA_ROOT, "photo")
+        #     path=os.path.join(path,file)
+        feature_tmp = np.zeros((1, 128))
+        label_name = name
+        num = 0
+        for image in os.listdir(path):
+            if '.png' in image or '.jpg' in image or '.jpeg' in image:
+                num += 1
 
-                    file_path = os.path.join(path, image)
-                    # path = os.path.dirname(path)
-                    print('current image: {}, \ncurrent label: {}'.format(file_path, label_name))
-                    if len(self.face_features(file_path)):
-                        feature_tmp += self.face_features(file_path)
-            if num > 0:
-                feature = feature_tmp / num
-                # 保存每个人的人脸特征
-                data = np.concatenate((data, feature))
-                # 保存标签
-                label.append(label_name)
+                file_path = os.path.join(path, image)
+                # path = os.path.dirname(path)
+                print('当前图像: {}, \n当前标签: {}'.format(file_path, label_name))
+                if len(self.face_features(file_path)):
+                    feature_tmp += self.face_features(file_path)
+        if num > 0:
+            feature = feature_tmp / num
+            # 保存每个人的人脸特征
+            data = np.concatenate((data, feature))
+            data = data[1:, :]
+            # print("data1:{}".format(data),type(data))
+            data1 = np.loadtxt(self.face_descriptor_path)
+            # print("data2:{}".format(data1),type(data1))
+            data=np.append(data1, data,axis=0)
+            # print("data4:{}".format(data))
+            # 读取人脸标签文本
+            face_label = open(self.face_label_path, 'r',encoding="utf-8")
+            # 载入本地标签
+            label = json.load(face_label)
+            face_label.close()
+            # 添加标签
+            label.append(label_name)
         # 因为data的第一行是128维0向量，所以实际存储的时候从第二行开始
-        data = data[1:, :]
+        # data = data[1:, :]
         # 保存人脸特征向量合成的矩阵到本地
         np.savetxt(self.face_descriptor_path, data, fmt='%f')
-        label_file = open(self.face_label_path, 'w')
+        label_file = open(self.face_label_path, 'w+',encoding='utf-8')
         # 使用json保存list到本地
-        json.dump(label, label_file)
+        json.dump(label, label_file,ensure_ascii=False)
         label_file.close()
         # 关闭所有的窗口
         cv2.destroyAllWindows()
@@ -164,7 +176,7 @@ class Face_recognition:
     # 摄像头识别
     def face_recognition1(self):
         # 捕获指定摄像头的实时视频流
-        cap = cv2.VideoCapture(0)
+        cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
         # 人脸识别分类器本地存储路径
         cascade_path = cv2.data.haarcascades + 'haarcascade_frontalface_alt2.xml'
         # 循环检测识别人脸

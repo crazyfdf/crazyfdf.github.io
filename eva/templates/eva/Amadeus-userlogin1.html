@@ -90,10 +90,10 @@
           <div class="card-body" style="margin-top: 50px;margin-left: 120px">
 
 
-                        <a href="face_recognition1">
-                            <button class="btn btn-light waves-effect waves-light m-1" style="background-color: #8DB6CD">人脸识别登录</button>
-                        </a>
-
+{#                        <a href="face_recognition1">#}
+{#                            <button class="btn btn-light waves-effect waves-light m-1" style="background-color: #8DB6CD">人脸识别登录</button>#}
+{#                        </a>#}
+                    <button onclick="login()" class="btn btn-light waves-effect waves-light m-1" style="background-color: #8DB6CD">人脸识别登录</button>
 {#                  <input type="hidden" name="label">#}
                     <p style="color: red">{{ info }}</p>
           </div>
@@ -155,16 +155,21 @@
   <script src="../../static/eva/assets/js/evaview.js"></script>
 <script>
     function login() {
-        			    //向nodejs搭建的服务器发送请求
+        //向nodejs搭建的服务器发送请求
                  $.ajax({
                      type: 'get',
                      url: 'http://127.0.0.1:8000/eva/face_recognition1',
+                     success: function (data) {
+                         if (data.res == 200){
 
-                     success: function () {
-                         console.log("人脸登录成功")
-                         window.location.href='http://127.0.0.1:8000/eva'
+                             window.location.href='http://127.0.0.1:8000/eva'
+                         }
+                         else{
+                             alert(data.info);
+                         };
                      },
                      error: function (err) {
+                         alert('登录失败');
                          console.log(err)
                      }
                  })

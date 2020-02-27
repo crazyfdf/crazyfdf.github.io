@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="description" content=""/>
   <meta name="author" content=""/>
+{#  <meta http-equiv="Access-Control-Allow-Origin" content="*" />#}
   <title>Amadeus - 服务系统</title>
   <!--logo-->
   <link rel="icon" href="{% static "eva/assets/images/logo0.png" %}" type="image/x-icon">
@@ -165,7 +166,7 @@
 
 <div class="waifu">
         <div class="waifu-tips"></div>
-        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <canvas id="live2d" class="live2d"></canvas>
         <div class="waifu-tool">
             <span class="fui-home"></span>
             <span class="fui-chat"></span>
@@ -284,23 +285,22 @@
   <script src="{% static "eva/assets/js/popper.min.js" %}"></script>
   <script src="{% static "eva/assets/js/bootstrap.min.js" %}"></script>
 
- <!-- simplebar js -->
+ <!-- 边栏 js -->
   <script src="{% static "eva/assets/plugins/simplebar/js/simplebar.js" %}"></script>
-  <!-- sidebar-menu js -->
+  <!-- 边栏菜单 js -->
   <script src="{% static "eva/assets/js/sidebar-menu.js" %}"></script>
-  <!-- loader scripts -->
-  <script src="{% static "eva/assets/js/jquery.loading-indicator.js" %}"></script>
-  <!-- Custom scripts -->
+
+  <!-- 自定义脚本 -->
   <script src="{% static "eva/assets/js/app-script.js" %}"></script>
-  <!-- Chart js -->
+  <!-- 图表 js -->
 
   <script src="{% static "eva/assets/plugins/Chart.js/Chart.min.js" %}"></script>
-  <!-- Vector map JavaScript -->
+  <!-- 矢量地图 JavaScript -->
   <script src="{% static "eva/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js" %}"></script>
   <script src="{% static "eva/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js" %}"></script>
-  <!-- Easy Pie Chart JS -->
+  <!-- 简易饼图 JS -->
   <script src="{% static "eva/assets/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js" %}"></script>
-  <!-- Sparkline JS -->
+  <!-- 迷你图 JS -->
   <script src="{% static "eva/assets/plugins/sparkline-charts/jquery.sparkline.min.js" %}"></script>
   <script src="{% static "eva/assets/plugins/jquery-knob/excanvas.js" %}"></script>
   <script src="{% static "eva/assets/plugins/jquery-knob/jquery.knob.js" %}"></script>
@@ -342,10 +342,10 @@
 <!-- Your XlchPlayerKey -->
 <script>XlchKey="nJUxZoxkBa";</script>
 <!-- font-awesome 4.2.0 -->
-{#<link href="https://lib.baomitu.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">#}
+<link href="https://lib.baomitu.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 {#<!-- JQuery 2.2.4 -->#}
 {#<script src="https://lib.baomitu.com/jquery/2.2.4/jquery.min.js"></script>#}
-{#<!-- JQuery-mousewheel 3.1.9 -->#}
+<!-- JQuery-mousewheel 3.1.9 -->
 {#<script src="https://lib.baomitu.com/jquery-mousewheel/3.1.9/jquery.mousewheel.min.js"></script>#}
 <!-- Scrollbar -->
 <script src="https://static.https.badapple.top/BadApplePlayer/js/scrollbar.js"></script>

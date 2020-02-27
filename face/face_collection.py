@@ -8,7 +8,7 @@ def Facecollection(window_name, camera_idx, catch_pic_num, path_name):
 
 
     # 视频来源，可以来自一段已存好的视频，也可以直接来自USB摄像头
-    cap = cv2.VideoCapture(camera_idx)
+    cap = cv2.VideoCapture(camera_idx,cv2.CAP_DSHOW)
     # 使用opencv人脸识别分类器
     classfier = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_alt2.xml')
     # 人脸分类器
