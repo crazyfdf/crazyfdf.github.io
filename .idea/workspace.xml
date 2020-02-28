@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="01a6aa9c-4fa1-4142-88d1-3936d5ef9dd9" name="默认的" comment="V0.02">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai.wav" beforeDir="false" afterPath="$PROJECT_DIR$/ai.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eva/static/eva/assets/live2d/waifu-tips.js" beforeDir="false" afterPath="$PROJECT_DIR$/eva/static/eva/assets/live2d/waifu-tips.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eva/turing_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/eva/turing_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload/xiaomai/xiaomai.json" beforeDir="false" afterPath="$PROJECT_DIR$/upload/xiaomai/xiaomai.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/eva/turing_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="59" />
+            <state relative-caret-position="292">
+              <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -55,19 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/upload/xiaomai/xiaomai.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/eva/templates/eva/Amadeus-index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4026">
+            <state relative-caret-position="178">
               <caret line="188" selection-start-line="188" selection-end-line="188" />
             </state>
           </provider>
@@ -204,11 +190,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="219" />
-    <option name="y" value="19" />
-    <option name="width" value="1317" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="859" />
+    <option name="y" value="8" />
+    <option name="width" value="968" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -241,23 +227,6 @@
               <item name="eva" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="eva" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyAi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyAi" type="462c0819:PsiDirectoryNode" />
-              <item name="eva" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="eva" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyAi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyAi" type="462c0819:PsiDirectoryNode" />
-              <item name="eva" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="eva" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="live2d" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyAi" type="b2602c69:ProjectViewProjectNode" />
@@ -353,7 +322,7 @@
               <item name="MyAi" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyAi" type="462c0819:PsiDirectoryNode" />
               <item name="upload" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaomai" type="462c0819:PsiDirectoryNode" />
+              <item name="Violet" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -364,7 +333,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/upload/tianyi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -373,22 +342,22 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\MyAi\upload\tianyi" />
-      <recent name="E:\MyAi\upload" />
-      <recent name="E:\MyAi\upload\Violet" />
-      <recent name="E:\MyAi\eva\templates\eva" />
-      <recent name="E:\MyAi\eva\static\eva\assets\live2d" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\MyAi\eva\static\eva\assets\live2d" />
       <recent name="E:\MyAi\upload" />
       <recent name="E:\MyAi\eva\templates\eva\charts" />
       <recent name="E:\MyAi\eva" />
       <recent name="E:\MyAi\face" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\MyAi" />
+      <recent name="E:\MyAi\upload\tianyi" />
+      <recent name="E:\MyAi\upload" />
+      <recent name="E:\MyAi\upload\Violet" />
+      <recent name="E:\MyAi\eva\templates\eva" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -403,7 +372,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lty">
+  <component name="RunManager" selected="Django server.nono">
     <configuration name="洛天依" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="nono" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -867,7 +836,7 @@
       <workItem from="1582531189235" duration="12258000" />
       <workItem from="1582613104598" duration="15955000" />
       <workItem from="1582774234399" duration="21076000" />
-      <workItem from="1582869667808" duration="1181000" />
+      <workItem from="1582869667808" duration="8688000" />
     </task>
     <task id="LOCAL-00001" summary="V0.02">
       <created>1582804962376</created>
@@ -876,11 +845,25 @@
       <option name="project" value="LOCAL" />
       <updated>1582804962376</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="V0.02">
+      <created>1582871568507</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582871568507</updated>
+    </task>
+    <task id="LOCAL-00003" summary="V0.02">
+      <created>1582896989816</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582896989816</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1089055000" />
+    <option name="totallyTimeSpent" value="1096562000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -892,10 +875,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="859" y="8" width="968" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2918502" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -906,10 +889,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3274918" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32858709" />
-      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32998884" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49573562" visible="true" weight="0.46203905" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5042644" side_tool="true" weight="0.37960956" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32698768" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32922733" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4944934" weight="0.47144458" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50550663" side_tool="true" weight="0.47144458" />
       <window_info anchor="bottom" id="调试" order="12" weight="0.32968238" />
       <window_info anchor="bottom" id="运行" order="13" sideWeight="0.49946696" weight="0.30552545" />
       <window_info anchor="bottom" id="Python Console" order="14" weight="0.32827735" />
@@ -988,13 +971,6 @@
     <SUITE FILE_PATH="coverage/MyAi$reptile.coverage" NAME="reptile Coverage Results" MODIFIED="1576811436560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/eva" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/eva/templates/eva/personalinformation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="47" column="53" lean-forward="true" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/face/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1144,13 +1120,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/upload/Violet/14.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1592">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_luotianyi-live2d-master.zip/luotianyi-live2d-master/live2d/songs.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2186">
@@ -1200,26 +1169,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eva/turing_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload/xiaomai/physics.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eva/templates/eva/Amadeus-index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4026">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/upload/leimu/11.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-75">
@@ -1231,6 +1180,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3519992_amadeus0.top.pem">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/Violet/14.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/xiaomai/physics.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eva/templates/eva/Amadeus-index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="188" selection-start-line="188" selection-end-line="188" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eva/turing_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
