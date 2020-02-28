@@ -40,8 +40,8 @@ def robot(request,text=""):
             },
             "selfInfo": {
                 "location": {
-                    "city": "漳州",
-                    "street": "南滨大道"
+                    "city": "京山",#漳州
+                    "street": ""#南滨大道
                 }
             }
         },
