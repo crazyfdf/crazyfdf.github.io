@@ -7,13 +7,13 @@ import wave,os,time
 from nono import globalvariable
 from django.shortcuts import render,redirect
 # 百度
-APP_ID = '16817140'
-API_KEY = 'GTcbLqppCEM9Z0uSEBQbLe1S'
-SECRET_KEY = 'cvSyqRa5kK7SQCRgYtdCuGQS0DDoudzS'
+APP_ID = '****'
+API_KEY = '****'
+SECRET_KEY = '******'
 client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
 
 # 图灵
-TURING_KEY = "011163556d864101ab96a3d2e3f9a5a8"
+TURING_KEY = "********"
 URL = "http://openapi.tuling123.com/openapi/api/v2"
 HEADERS = {'Content-Type': 'application/json;charset=UTF-8'}
 
